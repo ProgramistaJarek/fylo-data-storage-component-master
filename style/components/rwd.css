@@ -1,8 +1,56 @@
 @media (min-width: 768px) {
   body {
     background: #0c122c url("/images/bg-desktop.png") no-repeat;
-    background-size: contain;
+    background-size: 100% 50%;
     background-position: bottom;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .tools {
+    padding: 2rem 7rem 2rem 2.5rem;
+  }
+  .usage .rext-info {
+    padding: 2rem 5rem 1rem 2rem;
+  }
+  .usage .information {
+    padding: 0;
+  }
+  .usage .left {
+    width: 10rem;
+    border-radius: 0.5rem;
+    top: -2rem;
+    right: 2rem;
+    border-bottom-right-radius: 0;
+  }
+  .usage .left::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-top: 25px solid white;
+    bottom: -20px;
+    right: 0;
+  }
+  .usage .left h1 {
+    font-family: "Raleway", sans-serif;
+    margin-right: 0.5rem;
+  }
+  .usage .left span {
+    font: 700 14px "Raleway", sans-serif;
+    color: #848794;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 970px) {
+  .usage .rext-info {
+    padding: 2rem 18rem 1rem 2rem;
   }
 }
 /*# sourceMappingURL=rwd.css.map */
