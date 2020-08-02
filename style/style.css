@@ -236,7 +236,9 @@ body {
 
 @media (min-width: 768px) {
   body {
-    background: #0c122c url(/images/bg-desktop.png) no-repeat;
+    background-color: #0c122c;
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
     background-size: 100% 50%;
     background-position: bottom;
   }
