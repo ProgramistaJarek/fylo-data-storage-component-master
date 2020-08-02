@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  background: url("/images/bg-mobile.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  position: absolute;
+  z-index: 2;
+}
+
+.tools {
+  background-color: #1d2c67;
+  margin: 0 1.5rem;
+  padding: 2rem 2.5rem;
+  border-radius: 0.5rem 5rem 0.5rem 0.5rem;
+}
+.tools .logo {
+  background: url("/images/logo.svg") no-repeat;
+  width: 135px;
+  height: 40px;
+  padding: 2rem 2rem 2.5rem;
+}
+.tools ul {
+  width: 170px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tools ul li {
+  background-color: #0c122c;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.usage {
+  background-color: #1d2c67;
+  color: white;
+  border-radius: 0.5rem;
+  margin: 1rem 1.5rem 0;
+  position: relative;
+}
+.usage .information {
+  padding: 2rem 2.5rem 1rem;
+  font: 400 14px "Raleway", sans-serif;
+  color: #848794;
+}
+.usage .information span {
+  color: white;
+  font: 700;
+}
+.usage .show-usage {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8rem 2rem 0;
+  padding: 0 0 3rem;
+  font: 700 14px "Raleway", sans-serif;
+}
+.usage .left {
+  position: absolute;
+  background-color: white;
+  color: #0c122c;
+  width: 12rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  bottom: -2rem;
+  right: 4rem;
+  animation: scale-in-br 0.4s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.usage .left h1 {
+  font-family: "Raleway", sans-serif;
+  margin-right: 0.5rem;
+}
+.usage .left span {
+  font: 700 14px "Raleway", sans-serif;
+  color: #848794;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+@keyframes scale-in-br {
+  0% {
+    transform: scale(0);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+.bar {
+  height: 20px;
+  background: #0c122c;
+  border-radius: 25px;
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0.2rem;
+  position: relative;
+}
+.bar > span {
+  height: 75%;
+  width: 81.5%;
+  border-radius: 1rem;
+  background-image: linear-gradient(90deg, #ffc3a3 0%, #ff4d97 100%);
+  position: relative;
+  overflow: hidden;
+  animation: showBar 1s forwards 0s ease-out;
+}
+.bar > span:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: white;
+  right: 0.1rem;
+  top: 0.07rem;
+}
+
+@keyframes showBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 81.5%;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background: #0c122c url("/images/bg-desktop.png") no-repeat;
+    background-size: 100% 50%;
+    background-position: bottom;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .tools {
+    padding: 2rem 7rem 2rem 2.5rem;
+  }
+
+  .usage .rext-info {
+    padding: 2rem 5rem 1rem 2rem;
+  }
+  .usage .information {
+    padding: 0;
+  }
+  .usage .left {
+    width: 10rem;
+    border-radius: 0.5rem;
+    top: -2rem;
+    right: 2rem;
+    border-bottom-right-radius: 0;
+  }
+  .usage .left::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-top: 25px solid white;
+    bottom: -20px;
+    right: 0;
+  }
+  .usage .left h1 {
+    font-family: "Raleway", sans-serif;
+    margin-right: 0.5rem;
+  }
+  .usage .left span {
+    font: 700 14px "Raleway", sans-serif;
+    color: #848794;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+}
+@media (min-width: 970px) {
+  .usage .rext-info {
+    padding: 2rem 18rem 1rem 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

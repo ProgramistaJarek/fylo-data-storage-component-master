@@ -1,0 +1,8 @@
+@media (min-width: 768px) {
+  body {
+    background: #0c122c url("/images/bg-desktop.png") no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+}
+/*# sourceMappingURL=rwd.css.map */
